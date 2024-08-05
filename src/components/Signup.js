@@ -8,7 +8,7 @@ const Signup = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const {name, email, password} = credentials;
-        const response = await fetch("http://localhost:5000/api/auth/createuser", {
+        const response = await fetch("https://cloudsnote.vercel.app//api/auth/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,11 +36,10 @@ const Signup = (props) => {
     return (
         <div>
             <>
-                <div className='container my-4'>
+                <div className='container'>
                     <div className="text-center">
                         <h1 className="display-4">iNOTEBOOK</h1>
                         <p className='fw-semibold'>Your notes on cloud ☁️ </p>
-                        <span>New to iNotebook? 👉🏻Create a new account here!</span>
                     </div>
                     <form action='' className='px-5' onSubmit={handleSubmit}>
                         <div className="mb-3">
